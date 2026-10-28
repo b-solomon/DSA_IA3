@@ -52,11 +52,27 @@ This project explicitly demonstrates three fundamental Data Structures & Algorit
 
 ---
 
+## 📖 Plain-English Guide to Hashing Mathematical Symbols
+
+During presentations and viva, faculty frequently ask about the mathematical notation used in hash tables. Below is a beginner-friendly explanation of each symbol in simple words:
+
+| Symbol | Term | What It Means in Simple English | Real-World Project Example |
+| :---: | :--- | :--- | :--- |
+| **$k$** | **Key** | The specific number or data item you want to store or find. | A student registration roll number like `1191` or numeric key `25`. |
+| **$m$** | **Table Size** | The total number of storage slots available in the table. | A prime number like `11` slots (indexed `0` through `10`). |
+| **$h(k)$** | **Hash Function** | The formula that calculates which slot the key belongs to by taking the remainder. | $h(1191) = 1191 \bmod 11 = 3$. The student's record belongs in Slot #3. |
+| **$\alpha$** | **Load Factor** | How full the table is (calculated as $\text{items} / \text{total slots}$). | If 8 students are stored in 11 slots: $\alpha = 8/11 \approx 0.72$ (72% full). As $\alpha$ approaches 1.0, collisions increase. |
+| **$i$** | **Probe Counter** | If two keys want the same slot (a collision), $i$ counts which retry jump we are on. | $i=0$ is the initial slot. If occupied, $i=1$ is the first jump, $i=2$ is the second jump, and so on. |
+| **$h_2(k)$** | **Secondary Step** | In Double Hashing, a second formula that calculates how many slots to jump over during a collision. | Instead of jumping by 1 slot every time, jump by $h_2(k) = 5$ slots to avoid clustering. |
+| **$\gcd$** | **Greatest Common Divisor** | Checks if two numbers share common factors. We want $\gcd(\text{step}, m) = 1$ (coprime). | Because table size $m=11$ is prime, every jump step is coprime to 11, ensuring the probe visits every slot without getting stuck in a loop. |
+
+---
+
 ## 🚀 Key Features
 
 - 🖥️ **Full Student Examination Portal:** Timed exams, autosave, answer review flags, LIFO question history stack, and instant grading analytics.
 - 🔬 **Interactive DSA Laboratory:** Hands-on step-by-step visualizers for Stacks, Hash Tables, Binary Search, and Sorting (Bubble, Selection, Quick Sort).
-- 🧮 **Comprehensive Hashing & Formulas Hub:** In-depth mathematical breakdowns, symbol glossaries ($\alpha, \lambda, \mu, m, h(k)$), and live collision simulators.
+- 🧮 **Comprehensive Hashing & Formulas Hub:** In-depth breakdowns, beginner-friendly symbol glossaries (Keys, Table Sizes, Load Factors, and Jump Steps), and live interactive collision simulators.
 - 👨‍🏫 **Teacher & Admin Control Center:** Question bank management, exam authoring, performance analytics, and administrative binary search queries.
 - 🌙 **Modern Dark Laboratory Design System:** Clean Tailwind typography, glassmorphism cards, and high-contrast accessible inputs.
 
