@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExamEase — Micro Project 15 Online Examination Platform</title>
+    <meta property="og:image" content="https://bolt.new/static/og_default.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png" />
+    <script>
+      window.addEventListener('error', function (e) {
+        var errDiv = document.getElementById('runtime-error-overlay');
+        if (!errDiv) {
+          errDiv = document.createElement('div');
+          errDiv.id = 'runtime-error-overlay';
+          errDiv.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:999999;background:#b91c1c;color:#fff;padding:16px 20px;font-family:monospace;font-size:13px;box-shadow:0 4px 20px rgba(0,0,0,0.5);word-break:break-all;';
+          document.body.appendChild(errDiv);
+        }
+        errDiv.innerHTML = '<h3 style="font-weight:bold;margin-bottom:6px;">⚠️ Frontend Runtime Notice:</h3><p>' + (e.message || 'Script error') + '</p><p style="font-size:11px;opacity:0.8;margin-top:4px;">File: ' + (e.filename || 'unknown') + ':' + (e.lineno || 0) + '</p>';
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

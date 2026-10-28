@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white;
+  }
+
+  /* Universal styling for all form controls so typed text and placeholders are always clearly visible */
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea,
+  select {
+    background-color: #0f172a;
+    color: #f8fafc !important;
+    border-color: #334155;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]):focus,
+  textarea:focus,
+  select:focus {
+    border-color: #6366f1;
+    outline: none;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #64748b !important;
+  }
+
+  select option {
+    background-color: #0f172a;
+    color: #f8fafc;
+  }
+}
+
+@layer utilities {
+  /* Subtle Engineering Graph Grid (Lab Notebook aesthetic) */
+  .bg-engineering-grid {
+    background-color: #030712;
+    background-image: 
+      linear-gradient(to right, rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Dense Blueprint Grid */
+  .bg-blueprint-grid {
+    background-color: #0b1120;
+    background-image: 
+      linear-gradient(to right, rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+      radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+    background-size: 32px 32px, 32px 32px, 100% 100%;
+  }
+
+  /* Academic Dot Matrix Pattern */
+  .bg-dot-matrix {
+    background-image: radial-gradient(rgba(100, 116, 139, 0.25) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Algorithmic Topology Circuit (Hero backgrounds) */
+  .bg-algo-topology {
+    background-color: #0b1120;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.25) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(147, 51, 234, 0.2) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  }
+
+  /* Isometric Diamond Tech Pattern */
+  .bg-isometric-grid {
+    background-color: #0f172a;
+    background-image: 
+      linear-gradient(30deg, rgba(148, 163, 184, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(148, 163, 184, 0.05) 87.5%, rgba(148, 163, 184, 0.05)),
+      linear-gradient(150deg, rgba(148, 163, 184, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(148, 163, 184, 0.05) 87.5%, rgba(148, 163, 184, 0.05)),
+      linear-gradient(30deg, rgba(148, 163, 184, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(148, 163, 184, 0.05) 87.5%, rgba(148, 163, 184, 0.05)),
+      linear-gradient(150deg, rgba(148, 163, 184, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(148, 163, 184, 0.05) 87.5%, rgba(148, 163, 184, 0.05));
+    background-size: 40px 70px;
+  }
+
+  /* Clean collegiate dark glassmorphism card */
+  .card-academic {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(51, 65, 85, 0.7);
+    box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.4), 0 2px 6px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Dark laboratory card */
+  .card-laboratory {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(51, 65, 85, 0.7);
+    box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.5);
+  }
+}
