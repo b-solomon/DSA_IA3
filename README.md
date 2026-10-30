@@ -2,6 +2,8 @@
 ## EdTech Examination Platform & Algorithmic Analysis System
 **Department of Computer Science & Engineering | Data Structures & Algorithms Laboratory**
 
+🌐 **Live Website:** [https://bottleneck-lab-maths-ia-3.vercel.app/](https://bottleneck-lab-maths-ia-3.vercel.app/)
+
 [![React](https://img.shields.io/badge/Frontend-React%2018%20%2B%20TypeScript-blue.svg)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Bundler-Vite%207-646CFF.svg)](https://vitejs.dev/)
 [![TailwindCSS](https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC.svg)](https://tailwindcss.com/)
